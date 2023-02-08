@@ -1,108 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-02-08T10:58:29 IST" name="Suite" finished-at="2023-02-08T10:59:29 IST" duration-ms="60545">
+  <suite started-at="2023-02-08T18:29:37 IST" name="Suite" finished-at="2023-02-08T18:29:51 IST" duration-ms="13748">
     <groups>
     </groups>
-    <test started-at="2023-02-08T10:58:29 IST" name="Test" finished-at="2023-02-08T10:59:29 IST" duration-ms="60545">
-      <class name="scripts.inVC_LoginPage">
-        <test-method is-config="true" signature="openApp()[pri:0, instance:scripts.inVC_LoginPage@101952da]" started-at="2023-02-08T10:58:29 IST" name="openApp" finished-at="2023-02-08T10:58:41 IST" duration-ms="11775" status="PASS">
+    <test started-at="2023-02-08T18:29:37 IST" name="Test" finished-at="2023-02-08T18:29:51 IST" duration-ms="13748">
+      <class name="scripts.checkfirst">
+        <test-method is-config="true" signature="openApp()[pri:0, instance:scripts.checkfirst@15aab8c6]" started-at="2023-02-08T18:29:37 IST" name="openApp" finished-at="2023-02-08T18:29:47 IST" duration-ms="10226" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openApp -->
-        <test-method signature="tc1()[pri:0, instance:scripts.inVC_LoginPage@101952da]" started-at="2023-02-08T10:58:41 IST" name="tc1" finished-at="2023-02-08T10:58:41 IST" duration-ms="298" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tc1 -->
-        <test-method is-config="true" signature="closeApp(org.testng.ITestResult)[pri:0, instance:scripts.inVC_LoginPage@101952da]" started-at="2023-02-08T10:58:41 IST" name="closeApp" finished-at="2023-02-08T10:58:41 IST" duration-ms="346" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=tc1 status=SUCCESS method=inVC_LoginPage.tc1()[pri:0, instance:scripts.inVC_LoginPage@101952da] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeApp -->
-        <test-method is-config="true" signature="openApp()[pri:0, instance:scripts.inVC_LoginPage@101952da]" started-at="2023-02-08T10:58:41 IST" name="openApp" finished-at="2023-02-08T10:58:49 IST" duration-ms="7716" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- openApp -->
-        <test-method signature="tc2()[pri:0, instance:scripts.inVC_LoginPage@101952da]" started-at="2023-02-08T10:58:49 IST" name="tc2" finished-at="2023-02-08T10:58:59 IST" duration-ms="10111" status="PASS">
+        <test-method signature="tc2()[pri:0, instance:scripts.checkfirst@15aab8c6]" started-at="2023-02-08T18:29:47 IST" name="tc2" finished-at="2023-02-08T18:29:50 IST" duration-ms="3055" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tc2 -->
-        <test-method is-config="true" signature="closeApp(org.testng.ITestResult)[pri:0, instance:scripts.inVC_LoginPage@101952da]" started-at="2023-02-08T10:58:59 IST" name="closeApp" finished-at="2023-02-08T10:58:59 IST" duration-ms="314" status="PASS">
+        <test-method is-config="true" signature="closeApp(org.testng.ITestResult)[pri:0, instance:scripts.checkfirst@15aab8c6]" started-at="2023-02-08T18:29:50 IST" name="closeApp" finished-at="2023-02-08T18:29:51 IST" duration-ms="407" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=tc2 status=SUCCESS method=inVC_LoginPage.tc2()[pri:0, instance:scripts.inVC_LoginPage@101952da] output={null}]]]>
+                <![CDATA[[TestResult name=tc2 status=SUCCESS method=checkfirst.tc2()[pri:0, instance:scripts.checkfirst@15aab8c6] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeApp -->
-        <test-method is-config="true" signature="openApp()[pri:0, instance:scripts.inVC_LoginPage@101952da]" started-at="2023-02-08T10:58:59 IST" name="openApp" finished-at="2023-02-08T10:59:06 IST" duration-ms="6682" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- openApp -->
-        <test-method signature="tc3()[pri:0, instance:scripts.inVC_LoginPage@101952da]" started-at="2023-02-08T10:59:06 IST" name="tc3" finished-at="2023-02-08T10:59:08 IST" duration-ms="2114" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tc3 -->
-        <test-method is-config="true" signature="closeApp(org.testng.ITestResult)[pri:0, instance:scripts.inVC_LoginPage@101952da]" started-at="2023-02-08T10:59:08 IST" name="closeApp" finished-at="2023-02-08T10:59:09 IST" duration-ms="417" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=tc3 status=SUCCESS method=inVC_LoginPage.tc3()[pri:0, instance:scripts.inVC_LoginPage@101952da] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeApp -->
-        <test-method is-config="true" signature="openApp()[pri:0, instance:scripts.inVC_LoginPage@101952da]" started-at="2023-02-08T10:59:09 IST" name="openApp" finished-at="2023-02-08T10:59:16 IST" duration-ms="7753" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- openApp -->
-        <test-method signature="tc4()[pri:0, instance:scripts.inVC_LoginPage@101952da]" started-at="2023-02-08T10:59:16 IST" name="tc4" finished-at="2023-02-08T10:59:18 IST" duration-ms="1648" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tc4 -->
-        <test-method is-config="true" signature="closeApp(org.testng.ITestResult)[pri:0, instance:scripts.inVC_LoginPage@101952da]" started-at="2023-02-08T10:59:18 IST" name="closeApp" finished-at="2023-02-08T10:59:18 IST" duration-ms="302" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=tc4 status=SUCCESS method=inVC_LoginPage.tc4()[pri:0, instance:scripts.inVC_LoginPage@101952da] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeApp -->
-        <test-method is-config="true" signature="openApp()[pri:0, instance:scripts.inVC_LoginPage@101952da]" started-at="2023-02-08T10:59:18 IST" name="openApp" finished-at="2023-02-08T10:59:28 IST" duration-ms="9257" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- openApp -->
-        <test-method signature="tc5()[pri:0, instance:scripts.inVC_LoginPage@101952da]" started-at="2023-02-08T10:59:28 IST" name="tc5" finished-at="2023-02-08T10:59:29 IST" duration-ms="1405" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tc5 -->
-        <test-method is-config="true" signature="closeApp(org.testng.ITestResult)[pri:0, instance:scripts.inVC_LoginPage@101952da]" started-at="2023-02-08T10:59:29 IST" name="closeApp" finished-at="2023-02-08T10:59:29 IST" duration-ms="324" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=tc5 status=SUCCESS method=inVC_LoginPage.tc5()[pri:0, instance:scripts.inVC_LoginPage@101952da] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeApp -->
-      </class> <!-- scripts.inVC_LoginPage -->
+      </class> <!-- scripts.checkfirst -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>
