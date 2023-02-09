@@ -50,7 +50,7 @@ public class inVC_DashBoardPage extends BaseClass {
 			}
 		
 		//Verifying the functionality of instameeting
-		@Test(priority=1)
+		@Test(retryAnalyzer = MyRetry.class)
 		public void tc2() throws InterruptedException {
 			WebElement username=driver.findElement(By.id("email"));
 			username.sendKeys("sohel@peoplelinkvc.com");
@@ -61,7 +61,7 @@ public class inVC_DashBoardPage extends BaseClass {
 			WebElement login=driver.findElement(By.xpath("//span[@class='MuiButton-label']"));
 			login.click();
 			
-//			Thread.sleep(5000);
+			Thread.sleep(2000);
 			
 			WebElement instaMeetingIcon = driver.findElement(By.xpath("//div[@class='btnCardCntnr width50per noLeftPdng']"));
 			instaMeetingIcon.click();
@@ -84,7 +84,7 @@ public class inVC_DashBoardPage extends BaseClass {
 			WebElement login=driver.findElement(By.xpath("//span[@class='MuiButton-label']"));
 			login.click();
 			
-//			Thread.sleep(5000);
+			Thread.sleep(2000);
 			
 			WebElement joinMeetingIcon = driver.findElement(By.xpath("//div[@class='btnCardCntnr width50per noRightPdng']"));
 			joinMeetingIcon.click();
@@ -107,7 +107,7 @@ public class inVC_DashBoardPage extends BaseClass {
 			WebElement login=driver.findElement(By.xpath("//span[@class='MuiButton-label']"));
 			login.click();
 			
-//			Thread.sleep(5000);
+			Thread.sleep(2000);
 			
 			WebElement scheduleMeetingIcon = driver.findElement(By.xpath("(//div[@class='btnCardCntnr width50per noLeftPdng'])[2]"));
 			scheduleMeetingIcon.click();

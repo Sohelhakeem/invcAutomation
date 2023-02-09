@@ -3,13 +3,94 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT" verbose="0">
   <test thread-count="5" name="Test(failed)" verbose="0">
     <classes>
-      <class name="scripts.inVC_LoginPage">
+      <class name="scripts.inVC_Edit_Schedule">
         <methods>
+          <include name="tc1"/>
+          <include name="tc5"/>
+          <include name="tc3"/>
+          <include name="tc4"/>
+          <include name="openApp"/>
+          <include name="closeApp"/>
+        </methods>
+      </class> <!-- scripts.inVC_Edit_Schedule -->
+      <class name="scripts.inVC_File_Upload">
+        <methods>
+          <include name="openApp"/>
+          <include name="tc2"/>
+          <include name="closeApp"/>
+          <include name="tc3"/>
+        </methods>
+      </class> <!-- scripts.inVC_File_Upload -->
+      <class name="scripts.inVC_ShareScreenPage">
+        <methods>
+          <include name="tc5"/>
+          <include name="tc3"/>
+          <include name="openApp"/>
+          <include name="tc2"/>
+          <include name="closeApp"/>
+        </methods>
+      </class> <!-- scripts.inVC_ShareScreenPage -->
+      <class name="scripts.inVC_JoinMeetingPage">
+        <methods>
+          <include name="tc7"/>
+          <include name="tc5"/>
+          <include name="openApp"/>
+          <include name="tc6"/>
+          <include name="closeApp"/>
+        </methods>
+      </class> <!-- scripts.inVC_JoinMeetingPage -->
+      <class name="scripts.Invc_License_Expired">
+        <methods>
+          <include name="openApp"/>
+          <include name="tc3"/>
+          <include name="tc2"/>
+          <include name="tc4"/>
+          <include name="closeApp"/>
+        </methods>
+      </class> <!-- scripts.Invc_License_Expired -->
+      <class name="scripts.inVC_Recurring_Schedule">
+        <methods>
+          <include name="tc12"/>
+          <include name="tc11"/>
+          <include name="tc10"/>
+          <include name="closeApp"/>
+          <include name="tc8"/>
+          <include name="tc9"/>
+          <include name="tc1"/>
+          <include name="openApp"/>
+          <include name="tc2"/>
+          <include name="tc3"/>
+          <include name="tc4"/>
+          <include name="tc5"/>
+          <include name="tc14"/>
+          <include name="tc6"/>
+          <include name="tc7"/>
+        </methods>
+      </class> <!-- scripts.inVC_Recurring_Schedule -->
+      <class name="scripts.inVC_LicencePage">
+        <methods>
+          <include name="openApp"/>
+          <include name="closeApp"/>
+          <include name="tc1"/>
+        </methods>
+      </class> <!-- scripts.inVC_LicencePage -->
+      <class name="scripts.inVC_InstaMeeting">
+        <methods>
+          <include name="tc3"/>
           <include name="tc2"/>
           <include name="openApp"/>
           <include name="closeApp"/>
         </methods>
-      </class> <!-- scripts.inVC_LoginPage -->
+      </class> <!-- scripts.inVC_InstaMeeting -->
+      <class name="scripts.inVC_Schedule_Meeting">
+        <methods>
+          <include name="tc6"/>
+          <include name="openApp"/>
+          <include name="tc7"/>
+          <include name="tc1"/>
+          <include name="closeApp"/>
+        </methods>
+      </class> <!-- scripts.inVC_Schedule_Meeting -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

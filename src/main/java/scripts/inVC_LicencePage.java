@@ -29,9 +29,9 @@ public class inVC_LicencePage extends BaseClass {
 		licenceDD.click();
 //		Thread.sleep(2000);
 		
-		String expectedurl = "https://staging.invc.vc/manage-licenses";
-		String currenturl = driver.getCurrentUrl();
-		Assert.assertEquals(expectedurl, currenturl);
+		String actaul_Text = "Manage Licenses";
+		String exp_Text = driver.findElement(By.xpath("//h2[normalize-space()='Manage Licenses']")).getText();
+		Assert.assertEquals(actaul_Text, exp_Text);
 		
 	}
 	@Test

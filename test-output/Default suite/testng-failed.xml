@@ -3,17 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="scripts.inVC_LoginPage">
+      <class name="scripts.checkfirst">
         <methods>
-          <include name="tc2"/>
-          <include name="tc4"/>
-          <include name="tc1"/>
-          <include name="tc3"/>
-          <include name="tc5"/>
+          <include name="tc7"/>
           <include name="openApp"/>
+          <include name="tc6"/>
           <include name="closeApp"/>
         </methods>
-      </class> <!-- scripts.inVC_LoginPage -->
+      </class> <!-- scripts.checkfirst -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

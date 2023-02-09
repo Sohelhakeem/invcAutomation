@@ -14,41 +14,9 @@ import org.testng.annotations.Test;
 import genericLib.BaseClass;
 
 public class inVC_File_Upload extends BaseClass{
+	
 	@Test
 	public void tc1() throws InterruptedException, AWTException {
-		WebElement username=driver.findElement(By.id("email"));
-		username.sendKeys("sohelhakeem@gmail.com");
-		
-		WebElement password=driver.findElement(By.id("password"));
-		password.sendKeys("Hyderabad@123");
-				
-		WebElement login=driver.findElement(By.xpath("//span[@class='MuiButton-label']"));
-		login.click();
-		
-		Thread.sleep(2000);
-		
-		WebElement avatarDroDwn=driver.findElement(By.xpath("//div[@class='userAvatar']"));
-		avatarDroDwn.click();
-		Thread.sleep(500);
-		
-		WebElement myProfile=driver.findElement(By.xpath("//a[text()='My Profile']"));
-		myProfile.click();
-		
-		Thread.sleep(2000);
-		
-		WebElement upload_file = driver.findElement(By.xpath("//input[@id='contained-button-file']"));
-		upload_file.sendKeys("D:\\automtion scipts pic\\green.jpg");
-		Thread.sleep(3000);
-		WebElement save_Button = driver.findElement(By.xpath("//span[normalize-space()='SAVE']"));
-		save_Button.click();
-		Thread.sleep(3000);
-		Robot r = new Robot();
-		r.keyPress(KeyEvent.VK_ENTER);
-		Thread.sleep(2000);
-		
-	}
-	@Test
-	public void tc2() throws InterruptedException, AWTException {
 		WebElement username=driver.findElement(By.id("email"));
 		username.sendKeys("sohelhakeem@gmail.com");
 		
@@ -70,7 +38,7 @@ public class inVC_File_Upload extends BaseClass{
 		Thread.sleep(2000);
 		
 		WebElement upload_file = driver.findElement(By.xpath("//input[@id='contained-button-file']"));
-		upload_file.sendKeys("D:\\automtion scipts pic\\car.jpg");
+		upload_file.sendKeys("D:\\Upload\\green.jpg");
 		Thread.sleep(3000);
 		WebElement save_Button = driver.findElement(By.xpath("//span[normalize-space()='SAVE']"));
 		save_Button.click();
@@ -82,7 +50,7 @@ public class inVC_File_Upload extends BaseClass{
 	}
 	
 	@Test
-	public void tc3() throws InterruptedException, AWTException {
+	public void tc2() throws InterruptedException, AWTException {
 		WebElement username=driver.findElement(By.id("email"));
 		username.sendKeys("sohelhakeem@gmail.com");
 		
@@ -116,7 +84,7 @@ public class inVC_File_Upload extends BaseClass{
 	    Robot rb = new Robot();
 	 
 	    // copying File path to Clipboard
-	    StringSelection str = new StringSelection("D:\\automtion scipts pic\\skyshot.jpg");
+	    StringSelection str = new StringSelection("D:\\Upload\\stuff.jpg");
 	    Toolkit.getDefaultToolkit().getSystemClipboard().setContents(str, null);
 	 Thread.sleep(500);
 	     // press Contol+V for pasting
@@ -131,7 +99,7 @@ public class inVC_File_Upload extends BaseClass{
 	    rb.keyPress(KeyEvent.VK_ENTER);
 	    rb.keyRelease(KeyEvent.VK_ENTER);
 	    
-	    Thread.sleep(500);
+	    Thread.sleep(1000);
 		WebElement save_Button = driver.findElement(By.xpath("//span[normalize-space()='SAVE']"));
 		save_Button.click();
 		Thread.sleep(3000);

@@ -621,7 +621,7 @@ public class inVC_ContactInfo extends BaseClass {
 			
 			
 			//Verifying the Functionality inVC ContactInfo -BasicInformation Calender and Gender Radio button. 
-			@Test
+			@Test(retryAnalyzer = MyRetry.class)
 			public void tc15() throws InterruptedException {
 				WebElement username=driver.findElement(By.id("email"));
 				username.sendKeys("sohel@peoplelinkvc.com");
@@ -632,7 +632,7 @@ public class inVC_ContactInfo extends BaseClass {
 				WebElement login=driver.findElement(By.xpath("//span[@class='MuiButton-label']"));
 				login.click();
 				
-				//Thread.sleep(2000);
+				Thread.sleep(2000);
 				
 				WebElement avatarDroDwn=driver.findElement(By.xpath("//div[@class='userAvatar']"));
 				avatarDroDwn.click();

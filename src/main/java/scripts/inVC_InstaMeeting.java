@@ -53,7 +53,7 @@ public class inVC_InstaMeeting extends BaseClass {
 			
 			WebElement License_DD = driver.findElement(By.xpath("//div[@id='outlined-basic']"));
 			License_DD.click();
-			WebElement Host_License = driver.findElement(By.xpath("//li[normalize-space()='INVCHOST100_100']"));
+			WebElement Host_License = driver.findElement(By.xpath(p.getPropertyFiledata("License")));
 			Host_License.click();
 			
 			//Select slot
@@ -99,7 +99,7 @@ public class inVC_InstaMeeting extends BaseClass {
 					
 					WebElement License_DD = driver.findElement(By.xpath("//div[@id='outlined-basic']"));
 					License_DD.click();
-					WebElement Host_License = driver.findElement(By.xpath("//li[normalize-space()='INVCHOST100_100']"));
+					WebElement Host_License = driver.findElement(By.xpath(p.getPropertyFiledata("License")));
 					Host_License.click();
 					
 					//Select Custom slot

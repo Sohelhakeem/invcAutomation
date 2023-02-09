@@ -3,7 +3,16 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-      <class name="scripts.checkfirst"/>
+      <class name="scripts.inVC_Edit_Schedule"/>
+      <class name="scripts.Invc_License_Expired"/>
+      <class name="scripts.inVC_Recurring_Schedule"/>
+      <class name="scripts.inVC_MyMeetingsPage"/>
+      <class name="scripts.inVC_Schedule_Meeting"/>
+      <class name="scripts.inVC_ShareScreenPage"/>
+      <class name="scripts.inVC_LicencePage"/>
+      <class name="scripts.inVC_File_Upload"/>
+      <class name="scripts.inVC_InstaMeeting"/>
+      <class name="scripts.inVC_JoinMeetingPage"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

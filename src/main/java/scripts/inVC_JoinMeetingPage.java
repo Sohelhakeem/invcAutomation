@@ -157,10 +157,10 @@ public class inVC_JoinMeetingPage extends BaseClass {
 	@Test(retryAnalyzer = MyRetry.class)
 	public void tc6() throws InterruptedException, IOException {
 		WebElement username=driver.findElement(By.id("email"));
-		username.sendKeys("sohel@peoplelinkvc.com");
+		username.sendKeys(p.getPropertyFiledata("joinMeeting"));
 		
 		WebElement password=driver.findElement(By.id("password"));
-		password.sendKeys("Hyderabad@123");
+		password.sendKeys("Invc@123");
 		
 		WebElement login=driver.findElement(By.xpath("//span[@class='MuiButton-label']"));
 		login.click();
@@ -203,10 +203,10 @@ public class inVC_JoinMeetingPage extends BaseClass {
 	@Test(retryAnalyzer = MyRetry.class)
 	public void tc7() throws InterruptedException, IOException {
 		WebElement username=driver.findElement(By.id("email"));
-		username.sendKeys("sohel@peoplelinkvc.com");
+		username.sendKeys(p.getPropertyFiledata("joinMeeting"));
 		
 		WebElement password=driver.findElement(By.id("password"));
-		password.sendKeys("Hyderabad@123");
+		password.sendKeys("Invc@123");
 		
 		WebElement login=driver.findElement(By.xpath("//span[@class='MuiButton-label']"));
 		login.click();

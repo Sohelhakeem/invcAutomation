@@ -30,10 +30,9 @@ public class inVC_Schedule_Meeting extends BaseClass{
 		WebElement scheduleMeetingIcon = driver.findElement(By.xpath("(//div[@class='btnCardCntnr width50per noLeftPdng'])[2]"));
 		scheduleMeetingIcon.click();
 		
-		
 		JavascriptExecutor js=  (JavascriptExecutor)driver;
 		
-		String year = "2023";
+		String year = "2024";
 		String month = "January";
 		String date = "10";
 				
@@ -52,10 +51,11 @@ public class inVC_Schedule_Meeting extends BaseClass{
 			if(mon.equalsIgnoreCase(month) && yr.equals(year))
 				break;
 			else {
-				driver.findElement(By.xpath("(//button[@type='button'])[15]")).click();
+				driver.findElement(By.xpath("//body[1]/div[2]/div[3]/div[1]/div[2]/div[1]/div[1]/button[2]")).click();
 			}
 			
 		}
+		
 		
 		List<WebElement> alldates = driver.findElements(By.xpath("//div[@class='MuiPickersBasePicker-container']//div"));
 		
@@ -183,7 +183,7 @@ public class inVC_Schedule_Meeting extends BaseClass{
 		WebElement Create_meeting_password = driver.findElement(By.xpath("//div[@class='MuiInputBase-root MuiOutlinedInput-root MuiInputBase-formControl MuiInputBase-adornedEnd MuiOutlinedInput-adornedEnd MuiInputBase-marginDense MuiOutlinedInput-marginDense']//input[@id='outlined-basic']"));
 		Create_meeting_password.sendKeys("1234");
 		
-		String year = "2023";
+		String year = "2024";
 		String month = "January";
 		String date = "10";
 				
