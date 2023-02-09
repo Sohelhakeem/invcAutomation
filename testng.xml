@@ -6,13 +6,21 @@
       <class name="scripts.inVC_Edit_Schedule"/>
       <class name="scripts.Invc_License_Expired"/>
       <class name="scripts.inVC_Recurring_Schedule"/>
+      <class name="scripts.inVC_DashBoardPage"/>
+      <class name="scripts.inVC_ShareScreenPage"/>
+      <class name="scripts.inVC_SettingPage"/>
+      <class name="scripts.inVC_Calender_MyMeeting"/>
+      <class name="scripts.inVC_File_Upload"/>
+      <class name="scripts.inVC_ForgtPasswordPage"/>
+      <class name="scripts.inVC_InstaMeeting"/>
+      <class name="scripts.inVC_LoginPage"/>
+      <class name="scripts.inVC_ProfilePage"/>
+      <class name="scripts.inVC_JoinMeetingPage"/>
+      <class name="scripts.inVC_SignUp_Page"/>
       <class name="scripts.inVC_MyMeetingsPage"/>
       <class name="scripts.inVC_Schedule_Meeting"/>
-      <class name="scripts.inVC_ShareScreenPage"/>
       <class name="scripts.inVC_LicencePage"/>
-      <class name="scripts.inVC_File_Upload"/>
-      <class name="scripts.inVC_InstaMeeting"/>
-      <class name="scripts.inVC_JoinMeetingPage"/>
+      <class name="scripts.inVC_ContactInfo"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
