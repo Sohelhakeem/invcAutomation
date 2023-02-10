@@ -287,7 +287,7 @@ public class inVC_ProfilePage extends BaseClass {
 				Assert.assertEquals(exp_Txt, act_Txt);
 			}
 		//Verifying the Functionality inVC Professiojnal Details Edit button. 
-		@Test
+		@Test(retryAnalyzer = MyRetry.class)
 		public void tc7() throws InterruptedException {
 			WebElement username=driver.findElement(By.id("email"));
 			username.sendKeys("sohel@peoplelinkvc.com");
@@ -323,7 +323,7 @@ public class inVC_ProfilePage extends BaseClass {
 		}
 		
 		//Verifying the Functionality inVC Professional Details with Valid Details. 
-		@Test
+		@Test(retryAnalyzer = MyRetry.class)
 		public void tc8() throws InterruptedException {
 			WebElement username=driver.findElement(By.id("email"));
 			username.sendKeys("sohel@peoplelinkvc.com");

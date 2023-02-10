@@ -17,7 +17,7 @@ public class inVC_Edit_Schedule extends BaseClass{
 	
 	
 	//ALL FEATURES RECURRING SCHEDULE.
-			@Test(retryAnalyzer = MyRetry.class)
+			@Test(priority=0, retryAnalyzer = MyRetry.class)
 
 			public void tc1() throws InterruptedException, AWTException, IOException {
 				
@@ -75,7 +75,7 @@ public class inVC_Edit_Schedule extends BaseClass{
 
 	
 	//Upcoming View Button
-	@Test
+	@Test(priority=1, retryAnalyzer = MyRetry.class)
 	public void tc2() throws InterruptedException, IOException {
 
 		WebElement username=driver.findElement(By.id("email"));
@@ -100,7 +100,7 @@ public class inVC_Edit_Schedule extends BaseClass{
 		
 		
 	}
-	@Test
+	@Test(priority=2, retryAnalyzer = MyRetry.class)
 	public void tc3() throws InterruptedException, IOException {
 		WebElement username=driver.findElement(By.id("email"));
 		username.sendKeys(p.getPropertyFiledata("mail"));
@@ -128,7 +128,7 @@ public class inVC_Edit_Schedule extends BaseClass{
 	}
 	
 	//Update_Meeting_Btn
-	@Test
+	@Test(priority=3, retryAnalyzer = MyRetry.class)
 	public void tc4() throws InterruptedException, IOException {
 		
 		WebElement username=driver.findElement(By.id("email"));
@@ -163,7 +163,7 @@ public class inVC_Edit_Schedule extends BaseClass{
 	}
 
 		//Full Features
-		@Test(retryAnalyzer = MyRetry.class)
+		@Test(priority=4, retryAnalyzer = MyRetry.class)
 		public void tc5() throws InterruptedException, AWTException, IOException {
 			
 			WebElement username=driver.findElement(By.id("email"));
@@ -225,7 +225,7 @@ public class inVC_Edit_Schedule extends BaseClass{
 		}
 		
 		//Delete all recurring days completely
-				@Test(retryAnalyzer = MyRetry.class)
+				@Test(priority=5, retryAnalyzer = MyRetry.class)
 				public void tc6() throws InterruptedException, AWTException, IOException {
 					WebElement username=driver.findElement(By.id("email"));
 					username.sendKeys(p.getPropertyFiledata("mail"));

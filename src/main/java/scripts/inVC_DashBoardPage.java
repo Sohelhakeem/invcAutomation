@@ -119,7 +119,7 @@ public class inVC_DashBoardPage extends BaseClass {
 			}
 			
 		//Verifying the functionality of shareScreen
-		@Test(priority=4)
+		@Test(retryAnalyzer = MyRetry.class)
 		public void tc5() throws InterruptedException {
 			WebElement username=driver.findElement(By.id("email"));
 			username.sendKeys("sohel@peoplelinkvc.com");
@@ -142,7 +142,7 @@ public class inVC_DashBoardPage extends BaseClass {
 			}
 		
 //Verifying the functionality of MyMeetig 
-		@Test(priority=5)
+		@Test(retryAnalyzer = MyRetry.class)
 		public void tc6() throws InterruptedException {
 			WebElement username=driver.findElement(By.id("email"));
 			username.sendKeys("sohel@peoplelinkvc.com");
@@ -166,7 +166,7 @@ public class inVC_DashBoardPage extends BaseClass {
 			}
 		
 //Verifying the functionality of Calender Feature
-		@Test(priority=6)
+		@Test(retryAnalyzer = MyRetry.class)
 		public void tc7() throws InterruptedException {
 			WebElement username=driver.findElement(By.id("email"));
 			username.sendKeys("sohel@peoplelinkvc.com");
@@ -189,7 +189,7 @@ public class inVC_DashBoardPage extends BaseClass {
 			}
 
 //Verifying the functionality of headerAvatarDrpDwn F
-		@Test(priority=7)
+		@Test(retryAnalyzer = MyRetry.class)
 		public void tc8() throws InterruptedException {
 			WebElement username=driver.findElement(By.id("email"));
 			username.sendKeys("sohel@peoplelinkvc.com");
@@ -208,7 +208,7 @@ public class inVC_DashBoardPage extends BaseClass {
 		}
 		
 //Verifying the functionality of headerAvatarDrpDwn MyProfileFeature
-		@Test(priority=8)
+		@Test(retryAnalyzer = MyRetry.class)
 		public void tc9() throws InterruptedException {
 			WebElement username=driver.findElement(By.id("email"));
 			username.sendKeys("sohel@peoplelinkvc.com");
@@ -236,7 +236,7 @@ public class inVC_DashBoardPage extends BaseClass {
 			}
 			
 //Verifying the functionality of headerAvatarDrpDwn SettingFeature
-		@Test(priority=9)
+		@Test(retryAnalyzer = MyRetry.class)
 		public void tc20() throws InterruptedException {
 			WebElement username=driver.findElement(By.id("email"));
 			username.sendKeys("sohel@peoplelinkvc.com");
@@ -264,7 +264,7 @@ public class inVC_DashBoardPage extends BaseClass {
 			}
 			
 //Verifying the functionality of headerAvatarDrpDwn LogoutFeature
-		@Test(priority=10)
+		@Test(priority=10,retryAnalyzer = MyRetry.class)
 		public void tc21() throws InterruptedException {
 			WebElement username=driver.findElement(By.id("email"));
 			username.sendKeys("sohel@peoplelinkvc.com");

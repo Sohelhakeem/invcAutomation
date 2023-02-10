@@ -1,32 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-02-10T10:32:47 IST" name="Default suite" finished-at="2023-02-10T10:33:14 IST" duration-ms="27000">
+  <suite started-at="2023-02-10T12:42:59 IST" name="Default suite" finished-at="2023-02-10T12:43:30 IST" duration-ms="30837">
     <groups>
     </groups>
-    <test started-at="2023-02-10T10:32:47 IST" name="Default test" finished-at="2023-02-10T10:33:14 IST" duration-ms="27000">
-      <class name="scripts.checkfirst">
-        <test-method is-config="true" signature="openApp()[pri:0, instance:scripts.checkfirst@15aab8c6]" started-at="2023-02-10T10:32:47 IST" name="openApp" finished-at="2023-02-10T10:32:58 IST" duration-ms="11473" status="PASS">
+    <test started-at="2023-02-10T12:42:59 IST" name="Default test" finished-at="2023-02-10T12:43:30 IST" duration-ms="30837">
+      <class name="scripts.inVC_File_Upload">
+        <test-method is-config="true" signature="openApp()[pri:0, instance:scripts.inVC_File_Upload@33990a0c]" started-at="2023-02-10T12:42:59 IST" name="openApp" finished-at="2023-02-10T12:43:05 IST" duration-ms="6200" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openApp -->
-        <test-method signature="tc6()[pri:0, instance:scripts.checkfirst@15aab8c6]" started-at="2023-02-10T10:32:58 IST" name="tc6" finished-at="2023-02-10T10:33:13 IST" duration-ms="14977" status="PASS">
+        <test-method signature="tc1()[pri:0, instance:scripts.inVC_File_Upload@33990a0c]" started-at="2023-02-10T12:43:05 IST" name="tc1" finished-at="2023-02-10T12:43:15 IST" duration-ms="9948" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- tc6 -->
-        <test-method is-config="true" signature="closeApp(org.testng.ITestResult)[pri:0, instance:scripts.checkfirst@15aab8c6]" started-at="2023-02-10T10:33:13 IST" name="closeApp" finished-at="2023-02-10T10:33:14 IST" duration-ms="479" status="PASS">
+        </test-method> <!-- tc1 -->
+        <test-method is-config="true" signature="closeApp(org.testng.ITestResult)[pri:0, instance:scripts.inVC_File_Upload@33990a0c]" started-at="2023-02-10T12:43:15 IST" name="closeApp" finished-at="2023-02-10T12:43:16 IST" duration-ms="557" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=tc6 status=SUCCESS method=checkfirst.tc6()[pri:0, instance:scripts.checkfirst@15aab8c6] output={null}]]]>
+                <![CDATA[[TestResult name=tc1 status=SUCCESS method=inVC_File_Upload.tc1()[pri:0, instance:scripts.inVC_File_Upload@33990a0c] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeApp -->
-      </class> <!-- scripts.checkfirst -->
+        <test-method is-config="true" signature="openApp()[pri:0, instance:scripts.inVC_File_Upload@33990a0c]" started-at="2023-02-10T12:43:16 IST" name="openApp" finished-at="2023-02-10T12:43:24 IST" duration-ms="8538" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openApp -->
+        <test-method signature="tc2()[pri:0, instance:scripts.inVC_File_Upload@33990a0c]" started-at="2023-02-10T12:43:24 IST" name="tc2" finished-at="2023-02-10T12:43:29 IST" duration-ms="5002" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tc2 -->
+        <test-method is-config="true" signature="closeApp(org.testng.ITestResult)[pri:0, instance:scripts.inVC_File_Upload@33990a0c]" started-at="2023-02-10T12:43:29 IST" name="closeApp" finished-at="2023-02-10T12:43:30 IST" duration-ms="521" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=tc2 status=SUCCESS method=inVC_File_Upload.tc2()[pri:0, instance:scripts.inVC_File_Upload@33990a0c] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeApp -->
+      </class> <!-- scripts.inVC_File_Upload -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

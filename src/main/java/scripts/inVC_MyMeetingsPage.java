@@ -12,7 +12,7 @@ import genericLib.BaseClass;
 
 public class inVC_MyMeetingsPage  extends BaseClass{
 	//Verifying the functionality of MyMeetig 
-			@Test
+	@Test(retryAnalyzer = MyRetry.class)
 			public void tc1() throws InterruptedException {
 				WebElement username=driver.findElement(By.id("email"));
 				username.sendKeys("sohel@peoplelinkvc.com");
@@ -76,7 +76,7 @@ public class inVC_MyMeetingsPage  extends BaseClass{
 			}
 			
 	//Verifying functionality of inVC Calendar.
-			@Test
+			@Test(retryAnalyzer = MyRetry.class)
 			public void tc3() throws InterruptedException {
 				WebElement username=driver.findElement(By.id("email"));
 				username.sendKeys("sohel@peoplelinkvc.com");
@@ -246,7 +246,7 @@ public class inVC_MyMeetingsPage  extends BaseClass{
 			 * }
 			 */
 			//Verifying functionality of inVC My meetings- (past meeting) - schedule Meeting.
-			@Test
+			@Test(retryAnalyzer = MyRetry.class)
 			public void tc5() throws InterruptedException, AWTException {
 				WebElement username=driver.findElement(By.id("email"));
 				username.sendKeys("sohel@peoplelinkvc.com");
@@ -274,7 +274,7 @@ public class inVC_MyMeetingsPage  extends BaseClass{
 				
 			}
 			//Verifying functionality of inVC My meetings- (past meeting) - schedule Meeting- MEeting Title.
-			@Test
+			@Test(retryAnalyzer = MyRetry.class)
 			public void tc6() throws InterruptedException, AWTException, IOException {
 				WebElement username=driver.findElement(By.id("email"));
 				username.sendKeys(p.getPropertyFiledata("mail_id"));
@@ -306,7 +306,7 @@ public class inVC_MyMeetingsPage  extends BaseClass{
 				
 			}
 			//Verifying functionality of inVC My meetings- schedule Meeting - inVCPRo
-			@Test
+			@Test(retryAnalyzer = MyRetry.class)
 			public void tc7() throws InterruptedException, AWTException {
 				WebElement username=driver.findElement(By.id("email"));
 				username.sendKeys("sohel@peoplelinkvc.com");
@@ -337,7 +337,7 @@ public class inVC_MyMeetingsPage  extends BaseClass{
 				
 			}
 			//Verifying functionality of inVC My meetings- clear Selection.
-			@Test
+			@Test(retryAnalyzer = MyRetry.class)
 			public void tc8() throws InterruptedException, AWTException {
 				WebElement username=driver.findElement(By.id("email"));
 				username.sendKeys("sohel@peoplelinkvc.com");

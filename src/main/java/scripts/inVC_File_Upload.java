@@ -1,13 +1,8 @@
 package scripts;
 
 import java.awt.AWTException;
-import java.awt.Robot;
-import java.awt.Toolkit;
-import java.awt.datatransfer.StringSelection;
-import java.awt.event.KeyEvent;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
@@ -37,16 +32,16 @@ public class inVC_File_Upload extends BaseClass{
 		
 		Thread.sleep(2000);
 		
-		WebElement upload_file = driver.findElement(By.xpath("//input[@id='contained-button-file']"));
-		upload_file.sendKeys("D:\\Upload\\green.jpg");
-		Thread.sleep(3000);
-		WebElement save_Button = driver.findElement(By.xpath("//span[normalize-space()='SAVE']"));
-		save_Button.click();
-		Thread.sleep(3000);
-		Robot r = new Robot();
-		r.keyPress(KeyEvent.VK_ENTER);
-		Thread.sleep(2000);
-		
+//		WebElement upload_file = driver.findElement(By.id("contained-button-file"));
+//		upload_file.sendKeys("‪D:\\automtion scipts pic\\green.jpg");
+//		Thread.sleep(5000);
+//		WebElement save_Button = driver.findElement(By.xpath("//span[normalize-space()='SAVE']"));
+//		save_Button.click();
+//		Thread.sleep(3000);
+//		Robot r = new Robot();
+//		r.keyPress(KeyEvent.VK_ENTER);
+//		Thread.sleep(2000);
+//		
 	}
 	
 	@Test
@@ -71,41 +66,39 @@ public class inVC_File_Upload extends BaseClass{
 		
 		Thread.sleep(2000);
 		
-		WebElement upload_file = driver.findElement(By.xpath("//input[@id='contained-button-file']"));
-		//Click action on upload file.
-		JavascriptExecutor js = (JavascriptExecutor)driver;
-		js.executeScript("arguments[0].click();", upload_file);
-
-		Thread.sleep(1000);
-		
-		
-		
-		// creating object of Robot class
-	    Robot rb = new Robot();
-	 
-	    // copying File path to Clipboard
-	    StringSelection str = new StringSelection("D:\\Upload\\stuff.jpg");
-	    Toolkit.getDefaultToolkit().getSystemClipboard().setContents(str, null);
-	 Thread.sleep(500);
-	     // press Contol+V for pasting
-	     rb.keyPress(KeyEvent.VK_CONTROL);
-	     rb.keyPress(KeyEvent.VK_V);
-	 
-	    // release Contol+V for pasting
-	    rb.keyRelease(KeyEvent.VK_CONTROL);
-	    rb.keyRelease(KeyEvent.VK_V);
-	 
-	    // for pressing and releasing Enter
-	    rb.keyPress(KeyEvent.VK_ENTER);
-	    rb.keyRelease(KeyEvent.VK_ENTER);
-	    
-	    Thread.sleep(1000);
-		WebElement save_Button = driver.findElement(By.xpath("//span[normalize-space()='SAVE']"));
-		save_Button.click();
-		Thread.sleep(3000);
-		Robot r = new Robot();
-		r.keyPress(KeyEvent.VK_ENTER);
-		Thread.sleep(2000);
+//		WebElement upload_file = driver.findElement(By.id("contained-button-file"));
+//		//Click action on upload file.
+//		JavascriptExecutor js = (JavascriptExecutor)driver;
+//		js.executeScript("arguments[0].click();", upload_file);
+//
+//		Thread.sleep(1000);
+//		
+//		// creating object of Robot class
+//	    Robot rb = new Robot();
+//	 
+//	    // copying File path to Clipboard
+//	    StringSelection str = new StringSelection("D:\\automtion scipts pic\\car.jpg");
+//	    Toolkit.getDefaultToolkit().getSystemClipboard().setContents(str, null);
+//	 Thread.sleep(500);
+//	     // press Contol+V for pasting
+//	     rb.keyPress(KeyEvent.VK_CONTROL);
+//	     rb.keyPress(KeyEvent.VK_V);
+//	 
+//	    // release Contol+V for pasting
+//	    rb.keyRelease(KeyEvent.VK_CONTROL);
+//	    rb.keyRelease(KeyEvent.VK_V);
+//	 
+//	    // for pressing and releasing Enter
+//	    rb.keyPress(KeyEvent.VK_ENTER);
+//	    rb.keyRelease(KeyEvent.VK_ENTER);
+//	    
+//	    Thread.sleep(1000);
+//		WebElement save_Button = driver.findElement(By.xpath("//span[normalize-space()='SAVE']"));
+//		save_Button.click();
+//		Thread.sleep(3000);
+//		Robot r = new Robot();
+//		r.keyPress(KeyEvent.VK_ENTER);
+//		Thread.sleep(2000);
 		
 	}
 	

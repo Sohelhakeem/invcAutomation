@@ -490,7 +490,7 @@ public class inVC_Recurring_Schedule extends BaseClass {
 		}
 		
 		//Select Frequency Month and repeat 3 Months
-		@Test
+		@Test(retryAnalyzer = MyRetry.class)
 		public void tc10() throws InterruptedException, AWTException, IOException {
 			JavascriptExecutor js = (JavascriptExecutor) driver;
 			WebElement username=driver.findElement(By.id("email"));
