@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Test(failed)">
+    <classes>
+      <class name="scripts.inVC_JoinMeetingPage">
+        <methods>
+          <include name="openApp"/>
+          <include name="tc1"/>
+          <include name="closeApp"/>
+        </methods>
+      </class> <!-- scripts.inVC_JoinMeetingPage -->
+      <class name="scripts.inVC_SettingPage">
+        <methods>
+          <include name="tc1"/>
+          <include name="openApp"/>
+          <include name="closeApp"/>
+        </methods>
+      </class> <!-- scripts.inVC_SettingPage -->
+      <class name="scripts.inVC_Edit_Schedule">
+        <methods>
+          <include name="tc5"/>
+          <include name="tc3"/>
+          <include name="tc4"/>
+          <include name="openApp"/>
+          <include name="closeApp"/>
+        </methods>
+      </class> <!-- scripts.inVC_Edit_Schedule -->
+      <class name="scripts.inVC_InstaMeeting">
+        <methods>
+          <include name="tc2"/>
+          <include name="openApp"/>
+          <include name="closeApp"/>
+        </methods>
+      </class> <!-- scripts.inVC_InstaMeeting -->
+      <class name="scripts.inVC_ShareScreenPage">
+        <methods>
+          <include name="tc4"/>
+          <include name="openApp"/>
+          <include name="closeApp"/>
+        </methods>
+      </class> <!-- scripts.inVC_ShareScreenPage -->
+      <class name="scripts.inVC_Schedule_Meeting">
+        <methods>
+          <include name="tc6"/>
+          <include name="openApp"/>
+          <include name="tc1"/>
+          <include name="closeApp"/>
+        </methods>
+      </class> <!-- scripts.inVC_Schedule_Meeting -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

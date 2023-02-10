@@ -15,7 +15,7 @@ import org.testng.annotations.Test;
 import genericLib.BaseClass;
 
 public class inVC_Recurring_Schedule extends BaseClass {
-	@Test
+	@Test(priority=0, retryAnalyzer = MyRetry.class)
 	public void tc1() throws InterruptedException, AWTException, IOException {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		WebElement username=driver.findElement(By.id("email"));
@@ -44,7 +44,7 @@ public class inVC_Recurring_Schedule extends BaseClass {
 		
 	}
 	
-	@Test
+	@Test(priority=1, retryAnalyzer = MyRetry.class)
 	public void tc2() throws InterruptedException, AWTException, IOException {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		WebElement username=driver.findElement(By.id("email"));
@@ -79,7 +79,7 @@ public class inVC_Recurring_Schedule extends BaseClass {
 			
 	}
 	
-	@Test
+	@Test(priority=2, retryAnalyzer = MyRetry.class)
 	public void tc3() throws InterruptedException, AWTException, IOException {
 		
 		JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -120,7 +120,7 @@ public class inVC_Recurring_Schedule extends BaseClass {
 		Thread.sleep(3000);
 		
 	}
-	@Test
+	@Test(priority=3, retryAnalyzer = MyRetry.class)
 	public void tc4() throws InterruptedException, AWTException, IOException {
 		
 		JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -172,7 +172,7 @@ public class inVC_Recurring_Schedule extends BaseClass {
 			Thread.sleep(3000);
 			
 	}
-	@Test
+	@Test(priority=4, retryAnalyzer = MyRetry.class)
 	public void tc5() throws InterruptedException, AWTException, IOException {
 		
 		JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -236,7 +236,7 @@ public class inVC_Recurring_Schedule extends BaseClass {
 			Thread.sleep(3000);
 			
 	}
-	@Test
+	@Test(priority=5, retryAnalyzer = MyRetry.class)
 	public void tc6() throws InterruptedException, AWTException, IOException {
 		
 		JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -282,7 +282,7 @@ public class inVC_Recurring_Schedule extends BaseClass {
 			
 	}
 	
-	@Test
+	@Test(priority=6, retryAnalyzer = MyRetry.class)
 	public void tc7() throws InterruptedException, AWTException, IOException {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		WebElement username=driver.findElement(By.id("email"));
@@ -332,7 +332,7 @@ public class inVC_Recurring_Schedule extends BaseClass {
 			
 	}
 	
-	@Test
+	@Test(priority=7, retryAnalyzer = MyRetry.class)
 	public void tc8() throws InterruptedException, AWTException, IOException {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		WebElement username=driver.findElement(By.id("email"));
@@ -381,7 +381,7 @@ public class inVC_Recurring_Schedule extends BaseClass {
 	}
 	
 	//REAPEAT ON ALL DAYS OF WEEK
-		@Test
+		@Test(priority=8, retryAnalyzer = MyRetry.class)
 		public void tc9() throws InterruptedException, AWTException, IOException {
 			JavascriptExecutor js = (JavascriptExecutor) driver;
 			WebElement username=driver.findElement(By.id("email"));
@@ -490,7 +490,7 @@ public class inVC_Recurring_Schedule extends BaseClass {
 		}
 		
 		//Select Frequency Month and repeat 3 Months
-		@Test(retryAnalyzer = MyRetry.class)
+		@Test(priority=9, retryAnalyzer = MyRetry.class)
 		public void tc10() throws InterruptedException, AWTException, IOException {
 			JavascriptExecutor js = (JavascriptExecutor) driver;
 			WebElement username=driver.findElement(By.id("email"));
@@ -575,7 +575,7 @@ public class inVC_Recurring_Schedule extends BaseClass {
 		}
 		
 		//Select Frequency yearly and repeat 3 Years
-		@Test
+		@Test(priority=10, retryAnalyzer = MyRetry.class)
 		public void tc11() throws InterruptedException, AWTException, IOException {
 			JavascriptExecutor js = (JavascriptExecutor) driver;
 			WebElement username=driver.findElement(By.id("email"));
@@ -664,7 +664,7 @@ public class inVC_Recurring_Schedule extends BaseClass {
 		}
 		
 		//ALL FEATURES RECURRING SCHEDULE.
-		@Test(retryAnalyzer =MyRetry.class)
+		@Test(priority=11, retryAnalyzer = MyRetry.class)
 		public void tc12() throws InterruptedException, AWTException, IOException {
 			
 			JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -778,7 +778,7 @@ public class inVC_Recurring_Schedule extends BaseClass {
 		//Remove only selected days
 				
 		//Delete all recurring days completely
-		@Test
+		@Test(priority=13, retryAnalyzer = MyRetry.class)
 		public void tc14() throws InterruptedException, AWTException, IOException {
 			WebElement username=driver.findElement(By.id("email"));
 			username.sendKeys(p.getPropertyFiledata("mail_id"));

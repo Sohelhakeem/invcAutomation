@@ -16,7 +16,7 @@ import org.testng.annotations.Test;
 import genericLib.BaseClass;
 
 public class inVC_Schedule_Meeting extends BaseClass{
-	@Test
+	@Test(priority=0, retryAnalyzer = MyRetry.class)
 	public void tc1() throws InterruptedException, AWTException, IOException {
 		WebElement username=driver.findElement(By.id("email"));
 		username.sendKeys(p.getPropertyFiledata("mail_id"));
@@ -74,7 +74,7 @@ public class inVC_Schedule_Meeting extends BaseClass{
 		r.keyPress(KeyEvent.VK_ENTER);
 	}
 	
-	@Test
+	@Test(priority=1, retryAnalyzer = MyRetry.class)
 	public void tc2() throws InterruptedException, AWTException, IOException {
 		WebElement username=driver.findElement(By.id("email"));
 		username.sendKeys(p.getPropertyFiledata("mail_id"));
@@ -99,7 +99,7 @@ public class inVC_Schedule_Meeting extends BaseClass{
 		
 	}
 	
-	@Test
+	@Test(priority=2, retryAnalyzer = MyRetry.class)
 	public void tc3() throws InterruptedException, AWTException, IOException {
 		WebElement username=driver.findElement(By.id("email"));
 		username.sendKeys(p.getPropertyFiledata("mail_id"));
@@ -125,7 +125,7 @@ public class inVC_Schedule_Meeting extends BaseClass{
 		
 		}
 	
-	@Test
+	@Test(priority=3, retryAnalyzer = MyRetry.class)
 	public void tc4() throws InterruptedException, AWTException, IOException {
 		WebElement username=driver.findElement(By.id("email"));
 		username.sendKeys(p.getPropertyFiledata("mail_id"));
@@ -152,8 +152,8 @@ public class inVC_Schedule_Meeting extends BaseClass{
 //		recurrring_Button.click();
 	}
 	
-	@Test(retryAnalyzer = MyRetry.class)
-	public void tc6() throws InterruptedException, AWTException, IOException {
+	@Test(priority=4, retryAnalyzer = MyRetry.class)
+	public void tc5() throws InterruptedException, AWTException, IOException {
 		WebElement username=driver.findElement(By.id("email"));
 		username.sendKeys(p.getPropertyFiledata("mail_id"));
 		
@@ -242,8 +242,8 @@ public class inVC_Schedule_Meeting extends BaseClass{
 		
 	}
 	
-	@Test(retryAnalyzer = MyRetry.class)
-	public void tc7() throws InterruptedException, AWTException, IOException {
+	@Test(priority=5 , retryAnalyzer = MyRetry.class)
+	public void tc6() throws InterruptedException, AWTException, IOException {
 		WebElement username=driver.findElement(By.id("email"));
 		username.sendKeys(p.getPropertyFiledata("mail_id"));
 		

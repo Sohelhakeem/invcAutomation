@@ -65,7 +65,7 @@ public class inVC_Edit_Schedule extends BaseClass{
 					Thread.sleep(200);
 					WebElement Schedule_Meeting_Button = driver.findElement(By.xpath("/html[1]/body[1]/div[1]/div[1]/div[1]/div[3]/div[1]/div[1]/div[2]/div[2]/button[1]/span[1]"));
 					Schedule_Meeting_Button.click();
-					Thread.sleep(500);
+					Thread.sleep(2000);
 					
 					String actual_Text = "Meeting Details";
 					String exp_Text = driver.findElement(By.xpath("//h1[normalize-space()='Meeting Details']")).getText();

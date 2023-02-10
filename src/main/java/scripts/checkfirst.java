@@ -3,8 +3,12 @@ package scripts;
 
 
 
+import java.io.IOException;
+
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -12,88 +16,66 @@ import genericLib.BaseClass;
 
 public class checkfirst extends BaseClass{
 	@Test(retryAnalyzer = MyRetry.class)
-	public void tc7() throws InterruptedException {
+	public void tc3() throws InterruptedException, IOException{
 		WebElement username=driver.findElement(By.id("email"));
-		username.sendKeys("sohel@peoplelinkvc.com");
+		username.sendKeys(p.getPropertyFiledata("email"));
 		
 		WebElement password=driver.findElement(By.id("password"));
-		password.sendKeys("Hyderabad@123");
+		password.sendKeys(p.getPropertyFiledata("pwd"));
 		
 		WebElement login=driver.findElement(By.xpath("//span[@class='MuiButton-label']"));
 		login.click();
 		
-//		Thread.sleep(2000);
+		WebElement instaMeetingIcon = driver.findElement(By.xpath("//div[@class='btnCardCntnr width50per noLeftPdng']"));
+		instaMeetingIcon.click();
 		
-		WebElement avatarDroDwn=driver.findElement(By.xpath("//div[@class='userAvatar']"));
-		avatarDroDwn.click();
-//		Thread.sleep(2000);
+		WebElement Meeting_Title = driver.findElement(By.xpath("//input[@id='outlined-basic']"));
+		Meeting_Title.sendKeys("Autoamtion_Script");
 		
-		WebElement myProfile=driver.findElement(By.xpath("//a[text()='My Profile']"));
-		myProfile.click();
+		WebElement License_DD = driver.findElement(By.xpath("//div[@id='outlined-basic']"));
+		License_DD.click();
+		WebElement Host_License = driver.findElement(By.xpath(p.getPropertyFiledata("License")));
+		Host_License.click();
 		
+		//Select Custom slot
+//		WebElement custom_slot = driver.findElement(By.xpath("//div[5]//button[1]"));
+//		custom_slot.click();
+//		Select hours_DD = new Select (driver.findElement(By.xpath("//select[@id='selectHours']")));
+//		hours_DD.selectByVisibleText("1 hours");
+//		Select minutes_DD =new Select ( driver.findElement(By.xpath("//select[@id='selectMins']")));
+//		minutes_DD.selectByVisibleText("15 minutes");
+		//Select slot
+		WebElement slot15_min = driver.findElement(By.xpath("//label[normalize-space()='15min']"));
+		slot15_min.click();
+		Thread.sleep(200);
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		
+//		WebElement cancel = driver.findElement(By.xpath("//span[normalize-space()='CANCEL']"));
+//		js.executeScript("arguments[0].scrollIntoView();",cancel);
+//		Thread.sleep(200);
+//		cancel.isDisplayed();
+//		driver.findElement(By.xpath("//body[1]/div[1]/div[1]/div[1]/div[3]/div[1]/div[1]/div[2]/div[1]/div[1]/div[4]/div[1]/div[1]/div[2]/div[2]/div[3]/div[2]/button[1]")).click();
+//		Thread.sleep(200);
+		
+		//Select Participant Seats
+		WebElement custom_seats = driver.findElement(By.xpath("//div[@class='mainContainer ']//div[3]//div[1]//div[1]//div[1]//div[4]//button[1]"));
+		js.executeScript("arguments[0].scrollIntoView();",custom_seats);
+		Thread.sleep(200);
+		custom_seats.click();
+		Select seats_dd = new Select (driver.findElement(By.xpath("//select[@id='selecSeats']")));
+		seats_dd.selectByVisibleText("5 Participant Seats");
+		
+		WebElement create_Meeting = driver.findElement(By.xpath("//button[@class='MuiButtonBase-root MuiButton-root jss21 MuiButton-contained resBtnFullWidth MuiButton-containedPrimary MuiButton-containedSizeLarge MuiButton-sizeLarge MuiButton-disableElevation']"));
+		js.executeScript("arguments[0].scrollIntoView();",create_Meeting);
+		Thread.sleep(200);
+		create_Meeting.click();
+		
+		String expected_Text = "Ready to Join ?";
+		 WebElement text= driver.findElement(By.xpath("//span[@class='joinText resPdngTop']"));
+		 String actual_Text = text.getText();
+		Assert.assertEquals(expected_Text, actual_Text);
 
-		WebElement profEditBtn = driver.findElement(By.xpath("(//span[@class='MuiButton-label'])[2]"));
-		profEditBtn.click();
-		Thread.sleep(500);
-//		Thread.sleep(2000);
-		WebElement position=driver.findElement(By.xpath("//input[@aria-invalid='false']"));
-		position.click();
-		
-		String exp_Txt = "Official Details";
-		String act_Txt = driver.findElement(By.xpath("//h3[normalize-space()='Official Details']")).getText();
-		Assert.assertEquals(exp_Txt, act_Txt);
-		
-		
-	}
-	
-	//Verifying the Functionality inVC Professional Details with Valid Details. 
-	@Test(retryAnalyzer = MyRetry.class)
-	public void tc8() throws InterruptedException {
-		WebElement username=driver.findElement(By.id("email"));
-		username.sendKeys("sohel@peoplelinkvc.com");
-		
-		WebElement password=driver.findElement(By.id("password"));
-		password.sendKeys("Hyderabad@123");
-		
-		WebElement login=driver.findElement(By.xpath("//span[@class='MuiButton-label']"));
-		login.click();
-		
-//		Thread.sleep(2000);
-		
-		WebElement avatarDroDwn=driver.findElement(By.xpath("//div[@class='userAvatar']"));
-		avatarDroDwn.click();
-//		Thread.sleep(2000);
-		
-		WebElement myProfile=driver.findElement(By.xpath("//a[text()='My Profile']"));
-		myProfile.click();
-		
-
-		WebElement profEditBtn = driver.findElement(By.xpath("(//span[@class='MuiButton-label'])[2]"));
-		profEditBtn.click();
-//		Thread.sleep(2000);
-		
-		WebElement position=driver.findElement(By.xpath("//input[@aria-invalid='false']"));
-		position.sendKeys("Test Engineer");
-		
-		WebElement Email=driver.findElement(By.xpath("(//input[@aria-invalid='false'])[2]"));
-		Email.sendKeys("sohel@peoplelinkvc.com");
-		
-		
-		WebElement Branch=driver.findElement(By.xpath("(//input[@aria-invalid='false'])[3]"));
-		Branch.sendKeys("HM");
-		
-		WebElement Address=driver.findElement(By.xpath("(//input[@aria-invalid='false'])[4]"));
-		Address.sendKeys("Hyderabad");
-		
-		WebElement saveBtn = driver.findElement(By.xpath("(//span[@class='MuiButton-label'])[4]"));
-		saveBtn.click();
-		
-		String exp_Txt = "My Profile";
-		String act_Txt = driver.findElement(By.xpath("//h2[normalize-space()='My Profile']")).getText();
-		Assert.assertEquals(exp_Txt, act_Txt);
-		
-
-	}	
+		}
 	
 }
 	

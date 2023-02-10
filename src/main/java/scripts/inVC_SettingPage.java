@@ -11,7 +11,7 @@ public class inVC_SettingPage extends BaseClass {
 
 	
 	//Verifying the functionality of headerAvatarDrpDwn Setting Feature
-	@Test
+	@Test(retryAnalyzer = MyRetry.class)
 	public void tc1() throws InterruptedException {
 		WebElement username=driver.findElement(By.id("email"));
 		username.sendKeys("sohel@peoplelinkvc.com");
@@ -44,7 +44,7 @@ public class inVC_SettingPage extends BaseClass {
 		
 		}
 	//Verifying the functionality of headerAvatarDrpDwn Setting Current Password by entering All same Passwords
-	@Test
+	@Test(retryAnalyzer = MyRetry.class)
 	public void tc2() throws InterruptedException {
 		WebElement username=driver.findElement(By.id("email"));
 		username.sendKeys("sohel@peoplelinkvc.com");
@@ -125,7 +125,7 @@ public class inVC_SettingPage extends BaseClass {
 	        
 	}
 	//Verifying the functionality of headerAvatarDrpDwn Setting Current Password by entering Wrong Current Password .
-	@Test
+	@Test(retryAnalyzer = MyRetry.class)
 	public void tc4() throws InterruptedException {
 		WebElement username=driver.findElement(By.id("email"));
 		username.sendKeys("sohel@peoplelinkvc.com");
@@ -164,7 +164,7 @@ public class inVC_SettingPage extends BaseClass {
 	        Assert.assertEquals(expectedErrorMsg, actualErrorMsg);
 	}
 	
-	@Test
+	@Test(retryAnalyzer = MyRetry.class)
 	public void  tc5() throws InterruptedException {
 		//Verifying the functionality of inVC AvatarDD - License feature.
 		WebElement username=driver.findElement(By.id("email"));
@@ -191,7 +191,7 @@ public class inVC_SettingPage extends BaseClass {
 		
 		
 	}
-	@Test
+	@Test(retryAnalyzer = MyRetry.class)
 	public void  tc6() throws InterruptedException {
 		//Verifying the functionality of inVC AvatarDD - License feature-logout.
 		WebElement username=driver.findElement(By.id("email"));
