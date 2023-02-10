@@ -1,44 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-02-09T16:56:43 IST" name="Default suite" finished-at="2023-02-09T16:57:58 IST" duration-ms="75127">
+  <suite started-at="2023-02-10T10:32:47 IST" name="Default suite" finished-at="2023-02-10T10:33:14 IST" duration-ms="27000">
     <groups>
     </groups>
-    <test started-at="2023-02-09T16:56:43 IST" name="Default test" finished-at="2023-02-09T16:57:58 IST" duration-ms="75127">
+    <test started-at="2023-02-10T10:32:47 IST" name="Default test" finished-at="2023-02-10T10:33:14 IST" duration-ms="27000">
       <class name="scripts.checkfirst">
-        <test-method is-config="true" signature="openApp()[pri:0, instance:scripts.checkfirst@33990a0c]" started-at="2023-02-09T16:56:43 IST" name="openApp" finished-at="2023-02-09T16:56:52 IST" duration-ms="8768" status="PASS">
+        <test-method is-config="true" signature="openApp()[pri:0, instance:scripts.checkfirst@15aab8c6]" started-at="2023-02-10T10:32:47 IST" name="openApp" finished-at="2023-02-10T10:32:58 IST" duration-ms="11473" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openApp -->
-        <test-method signature="tc6()[pri:0, instance:scripts.checkfirst@33990a0c]" started-at="2023-02-09T16:56:52 IST" name="tc6" finished-at="2023-02-09T16:57:19 IST" duration-ms="27440" status="PASS">
+        <test-method signature="tc6()[pri:0, instance:scripts.checkfirst@15aab8c6]" started-at="2023-02-10T10:32:58 IST" name="tc6" finished-at="2023-02-10T10:33:13 IST" duration-ms="14977" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tc6 -->
-        <test-method is-config="true" signature="closeApp(org.testng.ITestResult)[pri:0, instance:scripts.checkfirst@33990a0c]" started-at="2023-02-09T16:57:19 IST" name="closeApp" finished-at="2023-02-09T16:57:21 IST" duration-ms="1536" status="PASS">
+        <test-method is-config="true" signature="closeApp(org.testng.ITestResult)[pri:0, instance:scripts.checkfirst@15aab8c6]" started-at="2023-02-10T10:33:13 IST" name="closeApp" finished-at="2023-02-10T10:33:14 IST" duration-ms="479" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=tc6 status=SUCCESS method=checkfirst.tc6()[pri:0, instance:scripts.checkfirst@33990a0c] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeApp -->
-        <test-method is-config="true" signature="openApp()[pri:0, instance:scripts.checkfirst@33990a0c]" started-at="2023-02-09T16:57:21 IST" name="openApp" finished-at="2023-02-09T16:57:31 IST" duration-ms="10022" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- openApp -->
-        <test-method signature="tc7()[pri:0, instance:scripts.checkfirst@33990a0c]" started-at="2023-02-09T16:57:31 IST" name="tc7" finished-at="2023-02-09T16:57:57 IST" duration-ms="26712" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tc7 -->
-        <test-method is-config="true" signature="closeApp(org.testng.ITestResult)[pri:0, instance:scripts.checkfirst@33990a0c]" started-at="2023-02-09T16:57:57 IST" name="closeApp" finished-at="2023-02-09T16:57:58 IST" duration-ms="560" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=tc7 status=SUCCESS method=checkfirst.tc7()[pri:0, instance:scripts.checkfirst@33990a0c] output={null}]]]>
+                <![CDATA[[TestResult name=tc6 status=SUCCESS method=checkfirst.tc6()[pri:0, instance:scripts.checkfirst@15aab8c6] output={null}]]]>
               </value>
             </param>
           </params>

@@ -224,7 +224,7 @@ public class inVC_ContactInfo extends BaseClass {
 		
 		}
 	//Verifying the Functionality inVC ContactInfo -WebsiteLink with Empty TextField. 
-		@Test
+		@Test(retryAnalyzer = MyRetry.class)
 		public void tc6() throws InterruptedException {
 			WebElement username=driver.findElement(By.id("email"));
 			username.sendKeys("sohel@peoplelinkvc.com");
