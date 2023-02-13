@@ -5,7 +5,7 @@
     <classes>
       <class name="scripts.checkfirst">
         <methods>
-          <include name="tc9"/>
+          <include name="tc1"/>
           <include name="openApp"/>
           <include name="closeApp"/>
         </methods>

@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-02-13T14:51:47 IST" name="Default suite" finished-at="2023-02-13T14:52:19 IST" duration-ms="32335">
+  <suite started-at="2023-02-13T16:48:52 IST" name="Default suite" finished-at="2023-02-13T16:49:07 IST" duration-ms="14122">
     <groups>
     </groups>
-    <test started-at="2023-02-13T14:51:47 IST" name="Default test" finished-at="2023-02-13T14:52:19 IST" duration-ms="32335">
+    <test started-at="2023-02-13T16:48:52 IST" name="Default test" finished-at="2023-02-13T16:49:07 IST" duration-ms="14122">
       <class name="scripts.checkfirst">
-        <test-method is-config="true" signature="openApp()[pri:0, instance:scripts.checkfirst@15aab8c6]" started-at="2023-02-13T14:51:47 IST" name="openApp" finished-at="2023-02-13T14:51:55 IST" duration-ms="7758" status="PASS">
+        <test-method is-config="true" signature="openApp()[pri:0, instance:scripts.checkfirst@15aab8c6]" started-at="2023-02-13T16:48:52 IST" name="openApp" finished-at="2023-02-13T16:49:02 IST" duration-ms="9591" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openApp -->
-        <test-method signature="tc11()[pri:10, instance:scripts.checkfirst@15aab8c6]" started-at="2023-02-13T14:51:55 IST" name="tc11" finished-at="2023-02-13T14:52:18 IST" duration-ms="22928" status="PASS">
+        <test-method signature="tc1()[pri:0, instance:scripts.checkfirst@15aab8c6]" started-at="2023-02-13T16:49:02 IST" name="tc1" finished-at="2023-02-13T16:49:06 IST" duration-ms="4115" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- tc11 -->
-        <test-method is-config="true" signature="closeApp(org.testng.ITestResult)[pri:0, instance:scripts.checkfirst@15aab8c6]" started-at="2023-02-13T14:52:18 IST" name="closeApp" finished-at="2023-02-13T14:52:19 IST" duration-ms="1584" status="PASS">
+        </test-method> <!-- tc1 -->
+        <test-method is-config="true" signature="closeApp(org.testng.ITestResult)[pri:0, instance:scripts.checkfirst@15aab8c6]" started-at="2023-02-13T16:49:06 IST" name="closeApp" finished-at="2023-02-13T16:49:07 IST" duration-ms="361" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=tc11 status=SUCCESS method=checkfirst.tc11()[pri:10, instance:scripts.checkfirst@15aab8c6] output={null}]]]>
+                <![CDATA[[TestResult name=tc1 status=SUCCESS method=checkfirst.tc1()[pri:0, instance:scripts.checkfirst@15aab8c6] output={null}]]]>
               </value>
             </param>
           </params>
