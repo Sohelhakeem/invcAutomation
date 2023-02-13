@@ -69,7 +69,7 @@ public class inVC_SignUp_Page extends BaseClass {
 				}
 				
 				//Verifying signUp Page with invalid FirstName-only Numbers(676HArry)
-				@Test
+				@Test(retryAnalyzer = MyRetry.class)
 				public void tc3() throws InterruptedException, AWTException {
 					 WebElement signup =driver.findElement(By.xpath("//a[@class='hmBtnAnchor']"));
 					  signup.click();

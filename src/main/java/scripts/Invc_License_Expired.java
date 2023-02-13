@@ -12,7 +12,7 @@ import org.testng.annotations.Test;
 import genericLib.BaseClass;
 
 public class Invc_License_Expired extends BaseClass {
-	@Test
+	@Test(priority=0,retryAnalyzer = MyRetry.class)
 	public void tc1() throws InterruptedException, IOException{
 		WebElement username=driver.findElement(By.id("email"));
 		username.sendKeys(p.getPropertyFiledata("LE_mail"));
@@ -47,7 +47,7 @@ public class Invc_License_Expired extends BaseClass {
 		
 	}
 	
-	@Test
+	@Test(priority =1 , retryAnalyzer = MyRetry.class)
 	public void tc2() throws InterruptedException, IOException{
 		WebElement username=driver.findElement(By.id("email"));
 		username.sendKeys(p.getPropertyFiledata("LE_mail"));

@@ -421,7 +421,7 @@ public class inVC_Recurring_Schedule extends BaseClass {
 				r.keyPress(KeyEvent.VK_ENTER);
 				r.keyRelease(KeyEvent.VK_ENTER);
 				
-				
+				Thread.sleep(1000);
 				//Select Sun_CheckBox
 				WebElement  Sun_CheckBox= driver.findElement(By.xpath("(//span[@class='MuiIconButton-label'])[4]"));
 				Sun_CheckBox.click();

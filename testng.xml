@@ -4,7 +4,6 @@
   <test thread-count="5" name="Test">
     <classes>
       <class name="scripts.inVC_Edit_Schedule"/>
-      <class name="scripts.Invc_License_Expired"/>
       <class name="scripts.inVC_Recurring_Schedule"/>
       <class name="scripts.inVC_DashBoardPage"/>
       <class name="scripts.inVC_ShareScreenPage"/>

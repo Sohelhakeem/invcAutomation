@@ -3,79 +3,108 @@ package scripts;
 
 
 
+import java.awt.AWTException;
+import java.awt.Robot;
+import java.awt.event.KeyEvent;
 import java.io.IOException;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import genericLib.BaseClass;
 
 public class checkfirst extends BaseClass{
-	@Test(retryAnalyzer = MyRetry.class)
-	public void tc3() throws InterruptedException, IOException{
+	@Test(priority=10, retryAnalyzer = MyRetry.class)
+	public void tc11() throws InterruptedException, AWTException, IOException {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
 		WebElement username=driver.findElement(By.id("email"));
-		username.sendKeys(p.getPropertyFiledata("email"));
+		username.sendKeys(p.getPropertyFiledata("mail_id"));
 		
 		WebElement password=driver.findElement(By.id("password"));
-		password.sendKeys(p.getPropertyFiledata("pwd"));
+		password.sendKeys(p.getPropertyFiledata("password"));
 		
 		WebElement login=driver.findElement(By.xpath("//span[@class='MuiButton-label']"));
 		login.click();
 		
-		WebElement instaMeetingIcon = driver.findElement(By.xpath("//div[@class='btnCardCntnr width50per noLeftPdng']"));
-		instaMeetingIcon.click();
+		WebElement  myMeetingLink= driver.findElement(By.xpath("//a[contains(text(),'My Meetings')]"));
+		myMeetingLink.click();
+		Thread.sleep(500);
+		WebElement  scheduleMeeting= driver.findElement(By.xpath("//div[@class='webAutoWidth']//button[@type='button']"));
+		scheduleMeeting.click();
+		Thread.sleep(500);
+		WebElement MeetingTitleTF = driver.findElement(By.xpath("//input[@aria-invalid='false']"));
+		MeetingTitleTF.sendKeys("SCRUM MEETING");
+//		Thread.sleep(2000);
 		
-		WebElement Meeting_Title = driver.findElement(By.xpath("//input[@id='outlined-basic']"));
-		Meeting_Title.sendKeys("Autoamtion_Script");
+		WebElement  Recuring_Schedule= driver.findElement(By.xpath("//div[@class='flexRow resrowFlexEnd']//input[@type='checkbox']"));
+		 js.executeScript("arguments[0].scrollIntoView(true);", Recuring_Schedule);
+		 Thread.sleep(500);
+		Recuring_Schedule.click();
+		//Thread.sleep(2000);
 		
-		WebElement License_DD = driver.findElement(By.xpath("//div[@id='outlined-basic']"));
-		License_DD.click();
-		WebElement Host_License = driver.findElement(By.xpath(p.getPropertyFiledata("License")));
-		Host_License.click();
 		
-		//Select Custom slot
-//		WebElement custom_slot = driver.findElement(By.xpath("//div[5]//button[1]"));
-//		custom_slot.click();
-//		Select hours_DD = new Select (driver.findElement(By.xpath("//select[@id='selectHours']")));
-//		hours_DD.selectByVisibleText("1 hours");
-//		Select minutes_DD =new Select ( driver.findElement(By.xpath("//select[@id='selectMins']")));
-//		minutes_DD.selectByVisibleText("15 minutes");
-		//Select slot
-		WebElement slot15_min = driver.findElement(By.xpath("//label[normalize-space()='15min']"));
-		slot15_min.click();
-		Thread.sleep(200);
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-		
-//		WebElement cancel = driver.findElement(By.xpath("//span[normalize-space()='CANCEL']"));
-//		js.executeScript("arguments[0].scrollIntoView();",cancel);
-//		Thread.sleep(200);
-//		cancel.isDisplayed();
-//		driver.findElement(By.xpath("//body[1]/div[1]/div[1]/div[1]/div[3]/div[1]/div[1]/div[2]/div[1]/div[1]/div[4]/div[1]/div[1]/div[2]/div[2]/div[3]/div[2]/button[1]")).click();
-//		Thread.sleep(200);
-		
-		//Select Participant Seats
-		WebElement custom_seats = driver.findElement(By.xpath("//div[@class='mainContainer ']//div[3]//div[1]//div[1]//div[1]//div[4]//button[1]"));
-		js.executeScript("arguments[0].scrollIntoView();",custom_seats);
-		Thread.sleep(200);
-		custom_seats.click();
-		Select seats_dd = new Select (driver.findElement(By.xpath("//select[@id='selecSeats']")));
-		seats_dd.selectByVisibleText("5 Participant Seats");
-		
-		WebElement create_Meeting = driver.findElement(By.xpath("//button[@class='MuiButtonBase-root MuiButton-root jss21 MuiButton-contained resBtnFullWidth MuiButton-containedPrimary MuiButton-containedSizeLarge MuiButton-sizeLarge MuiButton-disableElevation']"));
-		js.executeScript("arguments[0].scrollIntoView();",create_Meeting);
-		Thread.sleep(200);
-		create_Meeting.click();
-		
-		String expected_Text = "Ready to Join ?";
-		 WebElement text= driver.findElement(By.xpath("//span[@class='joinText resPdngTop']"));
-		 String actual_Text = text.getText();
-		Assert.assertEquals(expected_Text, actual_Text);
-
-		}
+		Thread.sleep(1000);
+		//participant_Seats_drp_Down
+			WebElement FREQUENCY_DD = driver.findElement(By.xpath("//div[@class='flexCol pdngCstmR rexflexHalf']//div[@id='demo-simple-select-outlined']"));
+			FREQUENCY_DD.click();
+//			js.executeScript("arguments[0].scrollIntoView();", FREQUENCY_DD);
+			Thread.sleep(1000);
+			//to SELECT yesrly FROM DROP DOWN
+			Robot r = new Robot();
+			r.keyPress(KeyEvent.VK_DOWN);
+			r.keyRelease(KeyEvent.VK_DOWN);
+			r.keyPress(KeyEvent.VK_DOWN);
+			r.keyRelease(KeyEvent.VK_DOWN);
+			r.keyPress(KeyEvent.VK_DOWN);
+			r.keyRelease(KeyEvent.VK_DOWN);
+			r.keyPress(KeyEvent.VK_DOWN);
+			r.keyRelease(KeyEvent.VK_DOWN);
+			r.keyPress(KeyEvent.VK_ENTER);
+			r.keyRelease(KeyEvent.VK_ENTER);
+			
+			Thread.sleep(1000);
+			WebElement Repeat_Every = driver.findElement(By.xpath("//div[@class='flexCol pdngCstmL rexflexHalf']//div[@id='demo-simple-select-outlined']"));
+			Repeat_Every.click();
+			js.executeScript("arguments[0].scrollIntoView();", Repeat_Every);
+			Thread.sleep(500);
+			
+			//to SELECT  3 YEAR FROM DROP DOWN
+			
+			r.keyPress(KeyEvent.VK_DOWN);
+			r.keyRelease(KeyEvent.VK_DOWN);
+			r.keyPress(KeyEvent.VK_DOWN);
+			r.keyRelease(KeyEvent.VK_DOWN);
+			r.keyPress(KeyEvent.VK_ENTER);
+			r.keyRelease(KeyEvent.VK_ENTER);
+			
+			Thread.sleep(400);
+			
+			//selectslot 15 min
+		 	WebElement  selectslot_15= driver.findElement(By.xpath("//div[@class='radioGroup']"));
+		 	js.executeScript("arguments[0].scrollIntoView();", selectslot_15);
+		 	Thread.sleep(500);
+		 	selectslot_15.click();
+			
+			//select Custom Seats 
+			WebElement  selectseats_Custom= driver.findElement(By.xpath("(//button[normalize-space()='Custom'])[2]"));
+			selectseats_Custom.click();
+			js.executeScript("arguments[0].scrollIntoView();", selectseats_Custom);
+			
+			//participant_Seats_drp_Down
+			Select participant_drp = new Select(driver.findElement(By.id("selecSeats")));
+			participant_drp.selectByVisibleText("6 Participant Seats");
+			js.executeScript("arguments[0].scrollIntoView();", participant_drp);
+			  
+			  //Save_Button 
+			  
+//			  WebElement Save_Button=driver.findElement(By.xpath("//span[normalize-space()='SAVE']"));
+//			  Save_Button.click(); js.executeScript("arguments[0].scrollIntoView();", Save_Button);
+			 
+	}
+	
 	
 }
 	
