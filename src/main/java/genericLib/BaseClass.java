@@ -6,7 +6,6 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
@@ -23,8 +22,8 @@ public class BaseClass {
 	@BeforeMethod
 	
 	public void openApp() throws IOException {
-//		WebDriverManager.chromedriver().setup();
-//		 driver = new ChromeDriver();
+		WebDriverManager.chromedriver().setup();
+		 driver = new ChromeDriver();
 		
 		
 //		 WebDriverManager.chromedriver().setup();
@@ -40,8 +39,8 @@ public class BaseClass {
 //	WebDriverManager.firefoxdriver().setup();	
 //	driver=new FirefoxDriver();
 	
-	WebDriverManager.edgedriver().setup();	
-	driver=new EdgeDriver();
+//	WebDriverManager.edgedriver().setup();	
+//	driver=new EdgeDriver();
 	
 	driver.manage().window().maximize();
 	driver.get(p.getPropertyFiledata("url"));

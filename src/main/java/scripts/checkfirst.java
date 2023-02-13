@@ -3,38 +3,59 @@ package scripts;
 
 
 
+import java.io.IOException;
+
 import org.openqa.selenium.By;
-import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import genericLib.BaseClass;
 
 public class checkfirst extends BaseClass{
-	//Verifying elements on DashBoard
-			@Test(retryAnalyzer = MyRetry.class)
-			public void tc1() throws InterruptedException {
-				WebElement username=driver.findElement(By.id("email"));
-				username.sendKeys("sohel@peoplelinkvc.com");
-				
-				WebElement password =driver.findElement(By.id("password"));
-				password.sendKeys("Hyderabad@123");
-				
-				WebElement login=driver.findElement(By.xpath("//span[@class='MuiButton-label']"));
-				login.click();
-				
-//				Thread.sleep(5000);
-				
-	Dimension size = driver.findElement(By.xpath("(//a[@href='/meeting'])[2]")).getSize();
-				
-				System.out.println(size);
-				if(driver.findElements(By.xpath("(//a[@href='/meeting'])[2]")).size()!=0){
-					System.out.println("Element is present");
-					}else{
-					System.out.println("Element is absent");
-					}
-				
-			}
+	//Verifying the functionality of shareScreen - meetingId- join&Share Button -your Name -click on Share&Screen Button.
+	@Test(retryAnalyzer = MyRetry.class)
+	public void tc5() throws InterruptedException, IOException {
+		WebElement username=driver.findElement(By.id("email"));
+		username.sendKeys("sohel@peoplelinkvc.com");
+		
+		WebElement password=driver.findElement(By.id("password"));
+		password.sendKeys("Hyderabad@123");
+		
+		WebElement login=driver.findElement(By.xpath("//span[@class='MuiButton-label']"));
+		login.click();
+		
+//		Thread.sleep(5000);
+		
+		WebElement shareScreenIcon = driver.findElement(By.xpath("(//div[@class='btnCardCntnr width50per noRightPdng'])[2]"));
+		shareScreenIcon.click();
+		
+		WebElement meetingId = driver.findElement(By.id("outlined-basic"));
+		meetingId.sendKeys(p.getPropertyFiledata("Screen_share_Id"));
+		
+		WebElement joinAndShareButton = driver.findElement(By.xpath("//*[@id=\"root\"]/div/div/div/div/div/div/div[2]/div/div[4]/button/span[1]"));
+		joinAndShareButton.click();
+		
+		WebElement yourNameTf = driver.findElement(By.id("displayname"));
+		yourNameTf.sendKeys("SOHAIL");
+		
+		WebElement JoinButton = driver.findElement(By.id("joinButton"));
+		JoinButton.click();
+		
+		WebElement sharescreen = driver.findElement(By.xpath("//div[@class='jss26 jss25']"));
+		sharescreen.click();
+		
+		WebElement request = driver.findElement(By.xpath("//button[@class='MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-containedSizeSmall MuiButton-sizeSmall MuiButton-disableElevation']"));
+		request.click();
+		
+//		Thread.sleep(3000);
+		//URL get changes with every new meeting ID
+		String actualText="Screen Share";
+		String expectedText= driver.findElement(By.xpath("//p[@class='jss33']")).getText();
+		Assert.assertEquals(expectedText,actualText);
+		
+		}	
+	
 	
 }
 	
